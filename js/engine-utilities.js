@@ -43,7 +43,7 @@ const addBackground = (root) => {
   const bg = document.createElement('img');
 
   // We set its src attribute and the height and width CSS attributes
-  bg.src = 'images/stars.png';
+  bg.src = 'images/spooky_background.png';
   bg.style.height = `${GAME_HEIGHT}px`;
   bg.style.width = `${GAME_WIDTH}px`;
 
@@ -53,14 +53,14 @@ const addBackground = (root) => {
   // We don't want the enemies to go beyond the lower edge of the image
   // so we place a white div to hide the enemies after they reach the bottom.
   // To see what it does, you can comment out all the remaining lines in the function to see the effect.
-  const whiteBox = document.createElement('div');
+  const darkBox = document.createElement('div');
 
   // We put a high z-index so that the div is placed over all other DOM nodes
-  whiteBox.style.zIndex = 100;
-  whiteBox.style.position = 'absolute';
-  whiteBox.style.top = `${GAME_HEIGHT}px`;
-  whiteBox.style.height = `${ENEMY_HEIGHT}px`;
-  whiteBox.style.width = `${GAME_WIDTH}px`;
-  whiteBox.style.background = '#fff';
-  root.append(whiteBox);
+  darkBox.style.zIndex = 100;
+  darkBox.style.position = 'absolute';
+  darkBox.style.top = `${GAME_HEIGHT}px`;
+  darkBox.style.height = `${ENEMY_HEIGHT}px`;
+  darkBox.style.width = `${GAME_WIDTH}px`;
+  darkBox.style.background = 'rgb(2, 2, 19)';
+  root.append(darkBox);
 };
