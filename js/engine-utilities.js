@@ -6,9 +6,9 @@
 
 // The purpose of this function is to determine in which slot to place our next enemy.
 // The possibilities are 0, 1, 2, 3 or 4.
-const nextEnemySpot = (enemies) => {
+const nextEnemyCandySpot = (enemies, candies) => {
   // enemySpots will refer to the number of spots available (can you calculate it?)
-  const enemySpots = GAME_WIDTH / ENEMY_WIDTH;
+  const enemyCandySpots = GAME_WIDTH / ENEMY_WIDTH;
 
   // To find out where to place an enemy, we first need to find out which are the spots available.
   // We don't want to place two enemies in the same lane. To accomplish this, we first create an
@@ -16,9 +16,12 @@ const nextEnemySpot = (enemies) => {
   // We then use forEach to iterate through all the enemies.
   // If you look at the constructor of the Enemy class, you can see that every instance will have a spot property.
   // We can use this property to modify the spotsTaken array.
-  const spotsTaken = [false, false, false, false, false];
+  const spotsTaken = [false, false, false, false, false, false, false, false, false, false];
   enemies.forEach((enemy) => {
     spotsTaken[enemy.spot] = true;
+  });
+  candies.forEach((candy) => {
+    spotsTaken[candy.spot] = true;
   });
 
   // We are now in a position to find out position. We declare a variable candidate that is initially undefined.
@@ -27,7 +30,7 @@ const nextEnemySpot = (enemies) => {
   let candidate = undefined;
   while (candidate === undefined || spotsTaken[candidate]) {
     // candidate is assigned a random number between 0 and enemySpots (not including enemySpots). (what number is enemySpots?)
-    candidate = Math.floor(Math.random() * enemySpots);
+    candidate = Math.floor(Math.random() * enemyCandySpots);
   }
 
   // When the while loop is finished, we are assured that we have a number that corresponds to a free spot, so we return it.
