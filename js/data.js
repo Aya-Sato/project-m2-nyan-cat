@@ -18,3 +18,8 @@ const MAX_ENEMIES = 3;
 const PLAYER_WIDTH = 120;
 const PLAYER_HEIGHT = 144;
 
+//These constants represent the bonus width and height.
+const BONUS_WIDTH = 120;
+const BONUS_HEIGHT = 107;
+const MAX_CANDIES = 2;
+
