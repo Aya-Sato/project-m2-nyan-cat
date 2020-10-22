@@ -84,7 +84,7 @@ class Engine {
   // the burger never dies. In your exercises you will fix this method.
   isPlayerDead = () => {
     const enemy = this.enemies.find((enemy) => {
-      if (enemy.x === this.player.x && enemy.y + ENEMY_HEIGHT > GAME_HEIGHT - PLAYER_HEIGHT + 160) {
+      if (enemy.x === this.player.x && enemy.y + ENEMY_HEIGHT > GAME_HEIGHT - PLAYER_HEIGHT + 115) {
         return true;
       }
       else {
@@ -96,7 +96,7 @@ class Engine {
 
   isBonusPointGained = () => {
     const candy = this.candies.find((candy) => {
-      if (candy.x === this.player.x && candy.y + BONUS_HEIGHT > GAME_HEIGHT - PLAYER_HEIGHT + 160) {
+      if (candy.x === this.player.x && candy.y + BONUS_HEIGHT > GAME_HEIGHT - PLAYER_HEIGHT + 50) {
         return true;
       }
       else {
