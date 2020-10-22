@@ -1,0 +1,27 @@
+class Candy {
+    constructor(theRoot, candySpot) {
+        this.root = theRoot;
+        this.spot = candySpot;
+        this.x = candySpot * BONUS_WIDTH;
+        this.y = -BONUS_HEIGHT;
+        this.collected = false;
+        this.domElement = document.createElement('img');
+        this.domElement.src = './images/candy.png';
+        this.domElement.style.position = 'absolute';
+        this.domElement.style.left = `${this.x}px`;
+        this.domElement.style.top = `${this.y}px`;
+        this.domElement.style.zIndex = 5;
+        theRoot.appendChild(this.domElement);
+        this.speed = Math.random() / 2 + 0.25;
+    }
+    
+    updateCandy(timeDiff) {
+        this.y = this.y + timeDiff * this.speed;
+        this.domElement.style.top = `${this.y}px`;
+        
+        if (this.y > GAME_HEIGHT) {
+        this.root.removeChild(this.domElement);
+        this.collected = true;
+        }
+    }
+}
