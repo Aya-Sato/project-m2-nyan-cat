@@ -50,7 +50,7 @@ class Engine {
       return !enemy.destroyed;
     });
     this.candies = this.candies.filter((candy) => {
-      return !candy.collected;
+      return !candy.destroyed;
     });
 
     // We need to perform the addition of enemies until we have enough enemies.
