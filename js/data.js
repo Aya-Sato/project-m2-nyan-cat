@@ -11,7 +11,7 @@ const GAME_HEIGHT = 800;
 // These constants represent the width and height of an enemy in pixels
 // as well as the maximum number of enemies on screen at any given time.
 const ENEMY_WIDTH = 120;
-const ENEMY_HEIGHT = 207;
+const ENEMY_HEIGHT = 103;
 const MAX_ENEMIES = 3;
 
 // These constants represent the player width and height.
