@@ -4,7 +4,7 @@ class Candy {
         this.spot = candySpot;
         this.x = candySpot * BONUS_WIDTH;
         this.y = -BONUS_HEIGHT;
-        this.collected = false;
+        this.destroyed = false;
         this.domElement = document.createElement('img');
         this.domElement.src = './images/candy.png';
         this.domElement.style.position = 'absolute';
@@ -21,7 +21,7 @@ class Candy {
         
         if (this.y > GAME_HEIGHT) {
         this.root.removeChild(this.domElement);
-        this.collected = true;
+        this.destroyed = true;
         }
     }
 }
