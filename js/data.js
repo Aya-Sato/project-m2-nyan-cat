@@ -26,4 +26,4 @@ let MAX_CANDIES = 2;
 //These constants represent the bonus (red candies) width and height.
 const BONUS_WIDTH_LEVEL3 = 120;
 const BONUS_HEIGHT_LEVEL3 = 107;
-const MAX_CANDIES_LEVEL3 = 1;
+let MAX_CANDIES_LEVEL3 = 1;
