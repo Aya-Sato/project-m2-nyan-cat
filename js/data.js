@@ -12,14 +12,18 @@ const GAME_HEIGHT = 800;
 // as well as the maximum number of enemies on screen at any given time.
 const ENEMY_WIDTH = 120;
 const ENEMY_HEIGHT = 103;
-const MAX_ENEMIES = 3;
+let MAX_ENEMIES = 3;
 
 // These constants represent the player width and height.
 const PLAYER_WIDTH = 120;
 const PLAYER_HEIGHT = 155;
 
-//These constants represent the bonus width and height.
+//These constants represent the bonus (purple candies) width and height.
 const BONUS_WIDTH = 120;
 const BONUS_HEIGHT = 107;
-const MAX_CANDIES = 2;
+let MAX_CANDIES = 2;
 
+//These constants represent the bonus (red candies) width and height.
+const BONUS_WIDTH_LEVEL3 = 120;
+const BONUS_HEIGHT_LEVEL3 = 107;
+const MAX_CANDIES_LEVEL3 = 1;
