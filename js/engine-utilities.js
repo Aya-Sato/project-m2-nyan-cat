@@ -6,7 +6,7 @@
 
 // The purpose of this function is to determine in which slot to place our next enemy.
 // The possibilities are 0, 1, 2, 3 or 4.
-const nextEnemyCandySpot = (enemies, candies) => {
+const nextEnemyCandySpot = (enemies, candies, specialcandies) => {
   // enemySpots will refer to the number of spots available (can you calculate it?)
   const enemyCandySpots = GAME_WIDTH / ENEMY_WIDTH;
 
@@ -22,6 +22,9 @@ const nextEnemyCandySpot = (enemies, candies) => {
   });
   candies.forEach((candy) => {
     spotsTaken[candy.spot] = true;
+  });
+  specialcandies.forEach((specialcandy) => {
+    spotsTaken[specialcandy.spot] = true;
   });
 
   // We are now in a position to find out position. We declare a variable candidate that is initially undefined.
