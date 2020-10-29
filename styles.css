@@ -1,0 +1,187 @@
+:root {
+    --color-dark-indigo: rgb(2, 2, 19);
+    --color-red: rgb(167, 33, 15);
+    --border-radius: 5px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-dark-indigo);
+    font-family: 'Creepster', cursive;
+}
+
+.start,
+.next-level,
+.end-game {
+    position: absolute;
+    width: 600px;
+    left: 300px;
+    opacity: 80%;
+    border-radius: var(--border-radius);
+    color: var(--color-dark-indigo);
+    background-color: white;
+    text-align: center;
+}
+
+.start,
+.next-level {
+    height: 300px;
+    top: 250px;
+}
+
+.next-level {
+    animation: shake 0.5s;
+    animation-iteration-count: 4;
+}
+
+.end-game {
+    height: 400px;
+    top: 200px;
+}
+
+.instruction,
+.ending-message {
+    font-size: 45px;
+    padding: 10px;
+}
+
+.congrats {
+    color: var(--color-red);
+    font-size: 60px;
+}
+
+.startbtn,
+.nextlevelbtn,
+.replaybtn {
+    position: relative;
+    top: -25px;
+    height: 70px;
+    width: 180px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-dark-indigo);
+    color: white;
+    font-family: 'Creepster', cursive;
+    font-size: 30px;
+}
+
+.game-over-btn {
+    position: absolute;
+    top: 810px;
+    left: 500px;
+    height: 50px;
+    width: 200px;
+    border: none;
+    opacity: 80%;
+    border-radius: var(--border-radius);
+    color: var(--color-dark-indigo);
+    background-color: white;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    font-size: 25px;
+    display: none;
+    z-index: 3000;
+}
+
+.startbtn:hover,
+.nextlevelbtn:hover,
+.replaybtn:hover  {
+    background-color: var(--color-red);
+}
+
+.game-over-btn:hover {
+    color: white;
+    background-color: var(--color-dark-indigo);
+}
+
+.next-level-text {
+    font-size: 45px;
+    padding: 25px;
+}
+
+@keyframes shake {
+    0% {transform: translate(1px, 1px) rotate(0deg);}
+    10% {transform: translate(-1px, -2px) rotate(-2deg);}
+    20% {transform: translate(-3px, 0px) rotate(2deg);}
+    30% {transform: translate(3px, 2px) rotate(0deg);}
+    40% {transform: translate(1px, -1px) rotate(2deg);}
+    50% {transform: translate(-1px, 2px) rotate(-2deg);}
+    60% {transform: translate(-3px, 1px) rotate(0deg);}
+    70% {transform: translate(3px, 1px) rotate(-2deg);}
+    80% {transform: translate(-1px, -1px) rotate(2deg);}
+    90% {transform: translate(1px, 2px) rotate(0deg);}
+    100% {transform: translate(1px, -2px) rotate(-2deg);}
+}
+
+.game-info {
+    position: absolute;
+    margin-top: 30px;
+    left: 1200px;
+    color: white;
+    font-size: 40px;
+}
+
+.level {
+    top: 30px;
+    margin: 30px;
+}
+
+.levelnum {
+    color: var(--color-red);
+}
+
+.timer {
+    top: 120px;
+    margin: 30px;
+}
+
+.score {
+    top: 210px;
+    margin: 30px;
+}
+
+.game-over-text {
+    position: absolute;
+    margin: 0;
+    left: 303px;
+    z-index: 2000;
+    color: var(--color-red);
+    font-size:150px;
+    animation: drop 2s ease forwards;
+    animation-iteration-count: 1;
+    display: none;
+}
+
+@keyframes drop{
+    0% {transform: translateY(-234px)}
+    70% {transform: translateY(350px)}
+    100% {transform: translateY(300px)}
+}
+
+.level3-pt-system {
+    width: 200px;
+    position: absolute;
+    left: 1200px;
+    top: 650px;
+}
+
+.point {
+    display: inline-block;
+    position: relative; 
+    left: -10px;
+    font-size: 30px;
+    color: white;
+}
+
+.purple {
+    top: -27px;
+}
+
+.red {
+    top: -20px;
+}
+
+.red-candy,
+.red {
+    visibility: hidden;
+}
