@@ -158,7 +158,7 @@ body {
     100% {transform: translateY(300px)}
 }
 
-.level3-pt-system {
+.pt-system {
     width: 200px;
     position: absolute;
     left: 1200px;
