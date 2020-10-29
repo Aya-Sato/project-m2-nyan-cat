@@ -1,11 +1,51 @@
 <html>
   <head>
-    <title>Nyan Kat</title>
+    <title>Candy Catcher Game</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <div class="game-info">
+      <div class="level">Level <br><span class="levelnum"></span></div>
+      <div class ="timer" id="timer">1:30</div>
+      <div class="score">0</div>
+    </div>
+    <div class="start">
+      <p class="instruction">Use the arrow keys to dodge the ghosts and collect candies</p>
+      <button class="startbtn">Start Game</button>
+    </div>
+    <div class="next-level">
+      <p class="next-level-text">You've defeated the ghosts!</p>
+      <button class="nextlevelbtn" id="level2btn">Play Level 2</button>
+      <button class="nextlevelbtn" id="level3btn">Play Level 3</button>
+    </div>
+    <div class="pt-system">
+      <img class="red-candy" src="images/candy_red.png" alt="red candy" width="80" />
+      <div class="point red">150pt</div>
+      <img class="purple-candy" src="images/candy_purple.png" alt="purple candy" width="80" />
+      <div class="point purple"><span class="purple-pt">10</span>pt</div>
+    </div>
+    <div>
+      <p class="game-over-text">Game Over</p>
+      <button class="game-over-btn">Start a new game</button>
+    </div>
+    <div class="end-game">
+      <p class="ending-message"><span class="congrats">Congratulations!<br></span>Your score is <span class="total-pt"></span>.<br>Time to eat all the candies!!</p>
+      <button class="replaybtn">Play again</button>
+    </div>
+
+
+    <audio id="ghostbusters" src="/sounds/Ghostbusters.mp3"></audio>
+    <audio id="witch-laugh" src="/sounds/witchlaugh.mp3"></audio>
+    <audio id="gameover" src="/sounds/gameover.mp3"></audio>
+    <audio id="game-ending" src="/sounds/gameending.mp3"></audio>
+    <audio id="get-point" src="/sounds/getpoint.mp3"></audio>
+
     <div id="app"></div>
     <script src="js/data.js"></script>
     <script src="js/Enemy.js"></script>
+    <script src="js/Bonus.js"></script>
+    <script src="js/Bonus-level3.js"></script>
     <script src="js/engine-utilities.js"></script>
     <script src="js/Engine.js"></script>
     <script src="js/Player.js"></script>
