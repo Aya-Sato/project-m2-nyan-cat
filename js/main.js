@@ -83,7 +83,7 @@ function countdown(minutes, seconds) {
           level3btn.style.display = 'none';
           witchLaugh.play();
           witchLaugh.volume = 0.4;
-        }, 4000);
+        }, 3000);
       }
       else if (levelNum.innerHTML === '2') {
         setTimeout(() => {
@@ -92,7 +92,7 @@ function countdown(minutes, seconds) {
           level2btn.style.display = 'none';
           witchLaugh.play();
           witchLaugh.volume = 0.4;
-        }, 4000);
+        }, 3000);
       }
       else if (levelNum.innerHTML === '3') {
         MAX_CANDIES_LEVEL3 = 0;
@@ -105,7 +105,7 @@ function countdown(minutes, seconds) {
           endgameReplayBtn.addEventListener('click', function() {
           location.reload();
           })
-        }, 4000);
+        }, 3000);
       }
     }
     if (gameEngine.isPlayerDead()) { 
