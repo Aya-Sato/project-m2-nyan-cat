@@ -17,4 +17,4 @@ The goal of the game is to stay alive as long as possible by avoiding the ghosts
 - Added a sound track and sound effects (i.e., for picking up candies, clearing the levels, losing/winning the game).
 
 ## Netlify Link
-
+https://project-m2-trick-r-treat.netlify.app/
