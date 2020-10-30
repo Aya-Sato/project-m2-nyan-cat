@@ -126,7 +126,7 @@ function startLevelTwoHandler() {
   purpleCandyPoint.innerHTML = 25;
   setTimeout(() => {
     gameEngine.gameLoop();
-    countdown(1, 30); 
+    countdown(1, 0); 
     MAX_ENEMIES = 4;
     MAX_CANDIES = 2;
   }, 1500);
@@ -146,7 +146,7 @@ function startLevelThreeHandler() {
   redCandyPoint.style.visibility = 'visible';
   setTimeout(() => {
     gameEngine.gameLoop();
-    countdown(1, 0);
+    countdown(0, 45);
     MAX_ENEMIES = 5;
     MAX_CANDIES = 1;
   }, 1500);
