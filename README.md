@@ -1,6 +1,6 @@
 # Object Oriented Programming Game Project
 
-<p align="center"><img src="./images/Trick-O'-Treat screenshot.png"></p>
+<p align="center"><img src="./images/Trick-r'-Treat screenshot.png"></p>
 
 ## The Game
 
